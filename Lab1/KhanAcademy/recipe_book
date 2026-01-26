@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project: Recipe book</title>
+        <meta charset="utf-8">
+        <style>
+            h1{
+                color: pink;
+            }
+            #salad{
+                background-color: green;
+            }
+            #egg{
+                background-color: grey;
+            }
+            #sandwich{
+                background-color: orange;
+            }
+
+        </style>
+    </head>
+    <body>
+       
+        <h1>Amina's Recipe Book</h1>
+        <h2>Contents:</h2>
+        
+        <ol>
+            <li><a href="#salad">Salad</a></li>
+            <li><a href="#eggs">Scrambled eggs</a></li>
+            <li><a href="#sandwich">Sandwich</a></li>
+        </ol>
+        
+        <h2 id="salad">Salad</h2>
+        
+        <ul>
+            <li>Time: 2-3 minutes</li>
+            <li>Serves: 1</li>
+        </ul>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cucumbers</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Tomatoes</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Lettuce</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Salt</td>
+                    <td>1 spoon</td>
+                </tr>
+                <tr>
+                    <td>Oil</td>
+                    <td>1-2 tbsp</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Step 1:</strong>  Wash the cucumber, tomatoes, and lettuce.<br>
+<strong>Step 2:</strong> Cut the cucumber into small pieces.<br>
+<strong>Step 3:</strong> Cut the tomatoes into small pieces.<br>
+<strong>Step 4:</strong> Tear the lettuce into pieces.<br>
+<strong>Step 5:</strong>Put all ingredients into a bowl.<br>
+<strong>Step 6:</strong> Add salt.<br>
+<strong>Step 7:</strong>Add oil (1 or 2 spoons).<br>
+<strong>Step 8:</strong>Mix everything well.<br>
+<strong>Step 9:</strong> Serve the salad.
+</p>
+
+
+<h2 id="eggs">Scrambled eggs</h2>
+        
+        <ul>
+            <li>Time: 5-6 minutes</li>
+            <li>Serves: 1</li>
+        </ul>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Salt</td>
+                    <td>1 pinch</td>
+                </tr>
+                <tr>
+                    <td>Oil</td>
+                    <td>1 tbsp</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Step 1:</strong> Crack 2 eggs into a bowl.<br>
+<strong>Step 2:</strong> Add a pinch of salt.<br>
+<strong>Step 3:</strong> Mix the eggs with a fork.<br>
+<strong>Step 4:</strong> Heat a pan.<br>
+<strong>Step 5:</strong> Add a little oil or butter to the pan.<br>
+<strong>Step 6:</strong> Pour the eggs into the pan.<br>
+<strong>Step 7:</strong> Stir gently while cooking.<br>
+<strong>Step 8:</strong> Cook for 2 or 3 minutes.<br>
+<strong>Step 9:</strong> Turn off the heat and serve.
+</p>
+
+<h2 id="sandwich">Sandwich</h2>
+        
+        <ul>
+            <li>Time: 3 minutes</li>
+            <li>Serves: 1</li>
+        </ul>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bread </td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Cheese</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Ham</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Butter</td>
+                    <td>1 tsb</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Step 1:</strong>  Take 2 slices of bread.<br>
+<strong>Step 2:</strong> Spread butter on the bread.<br>
+<strong>Step 3:</strong> Put cheese on one slice..<br>
+<strong>Step 4:</strong> Put ham on top of the cheese.<br>
+<strong>Step 5:</strong> Cover with the second slice of bread.<br>
+<strong>Step 6:</strong> Serve and eat.<br></p>
+
+
+    <p><em>Source: <a href="https://www.google.com/aclk?sa=L&ai=DChsSEwjDuJqs2qaSAxWkQpEFHROFNX8YACICCAEQABoCbHI&co=1&ase=2&gclid=Cj0KCQiAm9fLBhCQARIsAJoNOcsQBdeFHOXm3IRSSEvFROLutiFJ3PACjZHwaq-QzqrcS4f4Y2xlYKIaAlAGEALw_wcB&cid=CAASuwHkaJlgU9unjkjLoJnNNshl8qKhRhcuaYjl8K38OgFkf2zdR_VZ43u5XPLtEqLPpnG3Y6ZXYqqJRVSACA_yV4VMcsu8WapI1wlyhugt9ilkofqCAZ3u2Mn2Y3_TFzG6f2yneDHgH72HyWnQr0C3MLGYPR89P2NyaGw5asIsTAV2JQki-8GxCryBQMLCkomraXlpZ5wE1PFhwod9zpqVPluGEDaQ9b4-5Pq_3M80XR8I3Df8Rj-ycCoMB3qz&cce=2&category=acrcp_v1_32&sig=AOD64_3t2fcYfhnetlSl00CE4FWvbpNNUQ&q&nis=4&adurl&ved=2ahUKEwjU0ZSs2qaSAxVVBxAIHesjOJ0Q0Qx6BAgYEAE">Some recipes websites</a></em></p>
+    
+    </body>
+</html>
