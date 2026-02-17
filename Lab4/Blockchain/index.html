@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DApp Message</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0; /* простой светло-розовый */
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .container {
+      background: white;
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    #message {
+      background-color: #f5f5f5;
+      padding: 8px;
+      margin-bottom: 15px;
+      min-height: 25px;
+    }
+
+    input {
+      width: 90%;
+      padding: 6px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 6px 12px;
+      background-color: #ff66b2;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e0559d;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h3>Stored Message</h3>
+    <p id="message">Loading...</p>
+
+    <input id="newMessage" placeholder="New message">
+    <br>
+    <button id="updateBtn">Update</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+
+  <script>
+    const contractAddress = "0x68AcFFb29c1806a64677253140358DC3072A458f";
+    const abi = [
+      "function message() view returns (string)",
+      "function updateMessage(string _newMessage)"
+    ];
+
+    let provider;
+    let signer;
+    let contract;
+
+    async function connect() {
+      if (!window.ethereum) {
+        document.getElementById("message").innerText = "MetaMask not detected";
+        return;
+      }
+
+      provider = new ethers.BrowserProvider(window.ethereum);
+      await provider.send("eth_requestAccounts", []);
+
+      signer = await provider.getSigner();
+      contract = new ethers.Contract(contractAddress, abi, signer);
+
+      loadMessage();
+    }
+
+    async function loadMessage() {
+      try {
+        const msg = await contract.message();
+        document.getElementById("message").innerText = msg;
+      } catch {
+        document.getElementById("message").innerText = "Error reading message";
+      }
+    }
+
+    async function updateMessage() {
+      try {
+        const newMsg = document.getElementById("newMessage").value.trim();
+        if (!newMsg) return;
+
+        const tx = await contract.updateMessage(newMsg);
+        document.getElementById("message").innerText = "Sending...";
+        await tx.wait();
+
+        loadMessage();
+      } catch {
+        document.getElementById("message").innerText = "Transaction error";
+      }
+    }
+
+    document.getElementById("updateBtn")
+      .addEventListener("click", updateMessage);
+
+    connect();
+  </script>
+
+</body>
+</html>

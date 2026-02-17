@@ -1,0 +1,46 @@
+<div class="card">
+  <a class="imgWrap" [href]="product.link" target="_blank" rel="noopener">
+    <img class="img" [src]="activeImage" [alt]="product.name" />
+  </a>
+
+  <div class="nav">
+    <button type="button" class="navBtn" (click)="prevImage()"><</button>
+    <button type="button" class="navBtn" (click)="nextImage()">></button>
+  </div>
+
+  <div class="thumbs" *ngIf="product.images?.length">
+    <button
+      type="button"
+      class="thumb"
+      *ngFor="let img of product.images; let i = index"
+      (click)="setActive(i)"
+      [class.active]="i === activeIndex"
+      aria-label="thumbnail"
+    >
+      <img [src]="img" [alt]="product.name + ' ' + i" />
+    </button>
+  </div>
+
+  <div class="body">
+    <a class="title" [href]="product.link" target="_blank" rel="noopener">
+      {{ product.name }}
+    </a>
+
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="bottom">
+      <span class="price">{{ product.price }} ₸</span>
+
+      <span class="rating">
+        <span class="star full" *ngFor="let _ of fullStars">★</span>
+        <span class="star empty" *ngFor="let _ of emptyStars">☆</span>
+        <span class="num">{{ product.rating }}</span>
+      </span>
+    </div>
+
+    <div class="actions">
+      <button type="button" class="wa" (click)="shareWhatsApp()">Share WhatsApp</button>
+      <button type="button" class="tg" (click)="shareTelegram()">Share Telegram</button>
+    </div>
+  </div>
+</div>
